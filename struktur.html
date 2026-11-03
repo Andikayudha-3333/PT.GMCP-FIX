@@ -9,8 +9,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-   <link href="assets/img/LOGO.jpg" rel="icon" type="image/png">
-<link href="assets/img/LOGO.jpg" rel="apple-touch-icon">
+  <link href="assets/img/LOGO.jpg" rel="icon" type="image/jpeg">
+  <link href="assets/img/LOGO.jpg" rel="apple-touch-icon">
+
   <style>
     :root {
       --accent: #e84b0e;
@@ -70,51 +71,68 @@
     }
     .navmenu .dropdown:hover > ul { display: flex; }
 
-    /* ===== Judul bagian ===== */
+    /* ===== Judul bagian (rata kiri) ===== */
     .section-title {
-      text-align: center;
-      padding: 60px 0 30px;
+      padding-top: 60px;
+      padding-bottom: 20px;
     }
     .section-title h2 {
-      display: inline-flex;
-      align-items: center;
-      gap: 22px;
       font-size: 2.2rem;
       font-weight: 700;
       margin: 0;
-    }
-    .section-title h2::before,
-    .section-title h2::after {
-      content: "";
-      width: 60px;
-      height: 2px;
-      background: var(--accent);
     }
     .section-title p {
       color: var(--muted);
       margin: 10px 0 0;
     }
 
-    /* ===== Kata pengantar ===== */
-    .intro {
-      max-width: 780px;
-      margin: 0 auto;
-      text-align: center;
+    /* ===== Konten ===== */
+    .content-text {
       line-height: 1.8;
       color: #333;
+      text-align: left;
     }
+    .content-text p { margin-bottom: 1rem; }
 
     /* ===== Gambar bagan ===== */
     .org-image {
-      margin: 50px auto 70px;
-      max-width: 1000px;
-      text-align: center;
+      margin: 40px 0 60px;
+      background: #fff;
+      border: 1px solid #e6e8eb;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.06);
+      padding: 16px;
     }
     .org-image img {
+      display: block;
       width: 100%;
       height: auto;
+      border-radius: 4px;
+    }
+    .org-caption {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* ===== Kartu divisi ===== */
+    .division-card {
+      border: 1px solid #e6e8eb;
+      border-left: 4px solid var(--accent);
       border-radius: 8px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+      padding: 20px 22px;
+      height: 100%;
+    }
+    .division-card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .division-card p {
+      font-size: 15px;
+      color: #444;
+      margin: 0;
+      line-height: 1.7;
     }
 
     @media (max-width: 991px) {
@@ -132,9 +150,8 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="portfolio.html">Produk</a></li>
-      
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="portfolio.html">Product</a></li>
           <li class="dropdown">
             <a href="#"><span>Profile</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -149,14 +166,14 @@
 
   <main>
     <!-- ===== Judul ===== -->
-    <section class="section-title">
+    <section class="container section-title">
       <h2>Struktur Organisasi</h2>
       <p>Mengenal susunan kepemimpinan dan tim kami</p>
     </section>
 
-    <!-- ===== Kata pengantar ===== -->
+    <!-- ===== Pengantar ===== -->
     <section class="container">
-      <div class="intro">
+      <div class="content-text">
         <p>
           Keberhasilan PT Grahamakmur Ciptapratama tidak terlepas dari kerja sama tim yang solid
           dan kepemimpinan yang berkomitmen. Setiap bagian dalam organisasi kami memiliki peran
@@ -170,17 +187,75 @@
       </div>
     </section>
 
-    <!-- ===== Gambar bagan ===== -->
+    <!-- ===== Bagan ===== -->
     <section class="container">
       <div class="org-image">
-        <img src="assets/img/STRUKTUR.png" alt="Bagan Struktur Organisasi PT Grahamakmur Ciptapratama">
+        <img src="assets/img/bagan.png" alt="Bagan Struktur Organisasi PT Grahamakmur Ciptapratama">
+      </div>
+      <p class="org-caption">Bagan struktur organisasi PT Grahamakmur Ciptapratama.</p>
+    </section>
+
+    <!-- ===== Keterangan Divisi ===== -->
+    <section class="container pb-5">
+      <h3 class="h4 fw-bold mb-4">Keterangan Divisi</h3>
+      <div class="row gy-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="division-card">
+            <h4>General Manager</h4>
+            <p>Memimpin dan mengkoordinasikan seluruh kegiatan operasional perusahaan.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="division-card">
+            <h4>Operational Manager</h4>
+            <p>Mengawasi jalannya operasional harian, termasuk produksi dan mutu.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="division-card">
+            <h4>Mutu &amp; Laboratorium</h4>
+            <p>Menjamin kualitas produk melalui pengujian laboratorium dan pengawasan mutu.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="division-card">
+            <h4>Produksi</h4>
+            <p>Menjalankan proses pengolahan rajungan hingga produk siap dikemas.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="division-card">
+            <h4>Mechanical Tech &amp; Build</h4>
+            <p>Menangani perawatan dan pengembangan fasilitas serta peralatan teknis.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="division-card">
+            <h4>Komersial &amp; Purchasing</h4>
+            <p>Mengelola kebutuhan pembelian bahan dan hubungan dengan mitra komersial.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="division-card">
+            <h4>Umum &amp; Personalia</h4>
+            <p>Mengurus administrasi umum serta pengelolaan sumber daya manusia.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="division-card">
+            <h4>Keuangan &amp; Akunting</h4>
+            <p>Mengelola pencatatan keuangan, akunting, dan pelaporan internal.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- ===== Footer ===== -->
-  <footer class="bg-dark text-white-50 text-center py-4">
-    <small>&copy; 2026 PT Grahamakmur Ciptapratama. Bagian dari Indokom Group.</small>
+  <footer class="bg-dark text-white-50 py-4">
+    <div class="container">
+      <small>&copy; 2026 PT Grahamakmur Ciptapratama. Bagian dari Indokom Group.</small>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

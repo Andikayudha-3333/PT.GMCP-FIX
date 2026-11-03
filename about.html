@@ -1,5 +1,5 @@
-
-<html lang="en">
+<!DOCTYPE html>
+<html lang="id">
 
 <head>
   <meta charset="utf-8">
@@ -10,7 +10,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/LOGO.jpg" rel="icon" type="image/png">
-<link href="assets/img/LOGO.jpg" rel="apple-touch-icon">
+  <link href="assets/img/LOGO.jpg" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -26,6 +26,43 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Perataan kolom "Poin Keunggulan" dan timeline sejarah -->
+  <style>
+    .about .content,
+    .about .content p {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .sejarah-timeline {
+      border-left: 3px solid var(--accent, #e84b0e);
+      padding-left: 20px;
+    }
+    .sejarah-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .sejarah-item::before {
+      content: "";
+      position: absolute;
+      left: -27px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent, #e84b0e);
+    }
+    .sejarah-tahun {
+      display: block;
+      font-weight: 700;
+      color: var(--accent, #e84b0e);
+      margin-bottom: 4px;
+    }
+    .sejarah-item p {
+      margin: 0;
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: Flattern
@@ -43,41 +80,34 @@
     <div class="topbar d-flex align-items-center light-background">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=export.gmcp@indokomgroup.com" target="_blank">export.gmcp@indokomgroup.com</a></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=export.gmcp@indokomgroup.com" target="_blank" rel="noopener noreferrer">export.gmcp@indokomgroup.com</a></i>
           <i class="bi bi-phone d-flex align-items-center ms-4"><span>+62 856-4362-2153</span></i>
         </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-
-  <a href="https://www.instagram.com/gmcp_export/?utm_source=ig_web_button_share_sheet" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-  <a href="https://www.linkedin.com/company/USERNAME_LINKEDIN" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-</div>
-
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="https://www.instagram.com/gmcp_export/" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://id.linkedin.com/company/pt--grahamakmur-ciptapratama" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
       </div>
     </div><!-- End Top Bar -->
 
-    <div class="branding d-flex align-items-cente">
+    <div class="branding d-flex align-items-center">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
           <h1 class="sitename">PT GRAHAMAKMUR CIPTAPRATAMA</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html">Home<br></a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html" class="active">About</a></li>
-           
-    
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="portfolio.html">Product</a></li>
-           
             <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-  <ul>
-    <li><a href="struktur.html">Struktur Organisasi</a></li>
-  </ul>
-</li>
+              <ul>
+                <li><a href="struktur.html">Struktur Organisasi</a></li>
+              </ul>
+            </li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -110,18 +140,36 @@
       <div class="container">
 
         <div class="row gy-4">
+
+          <!-- Kolom kiri -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3>Tentang Kami</h3>
             <img src="assets/img/aboutt.jpg" class="img-fluid rounded-4 mb-4" alt="">
             <p>PT Grahamakmur Ciptapratama (GMCP) merupakan anak perusahaan Indokom Group yang berdiri untuk mengembangkan usaha pengolahan produk laut. Sejak mulai beroperasi di Gresik, Jawa Timur, pada 2012, kami fokus menghadirkan produk laut yang higienis, aman, dan terjamin mutunya.</p>
             <p>Kami mengolah rajungan pasteurisasi dan berbagai produk laut lainnya dengan proses yang terstruktur, mulai dari produksi, pengemasan, penyimpanan, hingga distribusi. Dengan kapasitas produksi yang terus kami kembangkan, kami berkomitmen menjaga kepercayaan mitra dan konsumen.</p>
+
+            <h4 class="mt-5 mb-3">Sejarah Singkat</h4>
+            <div class="sejarah-timeline">
+              <div class="sejarah-item">
+                <span class="sejarah-tahun">2000</span>
+                <p>Grup Indokom mulai mengoperasikan bisnis makanan laut melalui PT Indokom Samudra Persada.</p>
+              </div>
+              <div class="sejarah-item">
+                <span class="sejarah-tahun">2007</span>
+                <p>Didirikan PT Indo American Seafood yang berfokus pada produk udang.</p>
+              </div>
+              <div class="sejarah-item">
+                <span class="sejarah-tahun">2012</span>
+                <p>PT Grahamakmur Ciptapratama mulai beroperasi di Gresik, Jawa Timur, dengan produk rajungan pasteurisasi dalam kemasan kaleng.</p>
+              </div>
+            </div>
           </div>
+
+          <!-- Kolom kanan -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="content ps-0 ps-lg-5">
-              <p class="fst-italic">
-                Poin Keunggulan:
-              </p>
-              <ul>
+            <div class="content ps-0">
+              <p class="fst-italic">Poin Keunggulan:</p>
+              <ul class="ps-0">
                 <li><i class="bi bi-check-circle-fill"></i> <span>Bersertifikasi GMP dan HACCP untuk menjamin keamanan pangan</span></li>
                 <li><i class="bi bi-check-circle-fill"></i> <span>Proses produksi terintegrasi dari hulu hingga distribusi</span></li>
                 <li><i class="bi bi-check-circle-fill"></i> <span>Produk diekspor ke berbagai negara, termasuk Tiongkok, Korea Selatan, Taiwan, dan Belanda</span></li>
@@ -130,10 +178,13 @@
                 Sebagai bagian dari Indokom Group, GMCP terus berkembang dengan menjunjung tinggi standar mutu dan tanggung jawab terhadap konsumen maupun lingkungan.
               </p>
 
-             <div class="position-relative mt-4 mx-auto" style="width: fit-content;">
-  <img src="assets/img/aboud.jpg" class="img-fluid rounded-4 d-block" alt="">
-  <a href="https://youtu.be/wqktEb8OvVs?si=ymUtFumwKZh660by" class="glightbox pulsating-play-btn"></a>
-</div>
+              <div class="position-relative mt-4 mx-auto" style="width: fit-content;">
+                <img src="assets/img/aboud.jpg" class="img-fluid rounded-4 d-block" alt="">
+                <a href="https://youtu.be/wqktEb8OvVs?si=ymUtFumwKZh660by" class="glightbox pulsating-play-btn"></a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -156,16 +207,12 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
-                <img src="assets/img/team/saimi.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/saimi.jpg" class="img-fluid" alt="H. Saimi Saleh">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4> H. SAIMI SALEH, S.E., M.M.</h4>
+                <h4>H. SAIMI SALEH, S.E., M.M.</h4>
                 <span>Owner</span>
               </div>
             </div>
@@ -176,9 +223,6 @@
       </div>
 
     </section><!-- /Team Section -->
-
-    <!-- Skills Section -->
-    
 
     <!-- Clients Section -->
     <section id="clients" class="clients section">
@@ -193,7 +237,6 @@
 
         <div class="row g-0 clients-wrap">
 
-        
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/indoamer.jpg" class="img-fluid" alt="">
           </div><!-- End Client Item -->
@@ -210,8 +253,6 @@
             <img src="assets/img/clients/irian.jpg" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
-         
-
         </div>
 
       </div>
@@ -223,16 +264,15 @@
   <footer id="footer" class="footer dark-background">
 
     <div class="footer-top">
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-4 col-md-6 footer-about">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
 
-        <!-- Tag <a> diubah menjadi <div> -->
-        <div class="logo d-flex align-items-center">
-          <span class="sitename">PT GrahaMakmur CiptaPratama</span>
-        </div>
+            <div class="logo d-flex align-items-center">
+              <span class="sitename">PT GrahaMakmur CiptaPratama</span>
+            </div>
 
-        <div class="footer-contact pt-3">
+             <div class="footer-contact pt-3">
           <p>Jl. Veteran Madya 1 No. 1</p>
           <p>Kelurahan Gending, Kecamatan Kebomas, Kabupaten Gresik, Jawa Timur 61123.</p>
           <p class="mt-3"><strong>Phone:</strong> <span>+62 856-4362-2153</span></p>
@@ -240,22 +280,10 @@
         </div>
       </div>
 
-         
-
-    <div class="copyright text-center">
-      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
-
-        <div class="d-flex flex-column align-items-center align-items-lg-start">
-          <div>
-            
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="https://www.instagram.com/gmcp_export/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://id.linkedin.com/company/pt--grahamakmur-ciptapratama" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
         </div>
-
-      
-     <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-
-  <a href="https://www.instagram.com/gmcp_export/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-  <a href="https://id.linkedin.com/company/pt--grahamakmur-ciptapratama" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-</div>
 
       </div>
     </div>
@@ -275,7 +303,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
